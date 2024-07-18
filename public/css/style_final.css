@@ -1,0 +1,234 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  transition: background-color 2s ease;
+}
+#content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Thay đổi flex-direction thành column */
+  height: 100vh;
+  position: relative; /* Ensure content is relative for absolute positioned children */
+}
+
+#bannerImage {
+  display: none; /* Ẩn banner ban đầu */
+  position: absolute; /* Make the element positioned relative to the #content */
+  top: 2%;
+  width: 30%;
+  height: 30%; /* Maintain aspect ratio */
+  opacity: 0;
+  margin-bottom: 20px; /* Add some margin to separate the banner from the cake */
+  transition: opacity 2s ease; /* Add transition for smooth opacity change */
+}
+
+.title {
+  position: absolute;
+  top: calc(10% + 20%); /* Adjust the positioning relative to bannerImage */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  display: none; /* Ẩn chữ ban đầu */
+  white-space: normal; /* Cho phép xuống hàng khi cần */
+  word-wrap: break-word; /* Ngắt từ nếu quá dài */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.slideshow-container {
+  position: absolute;
+  width: 20vw;
+  max-width: 250px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none; /* Ẩn slideshow ban đầu */
+}
+
+.left-slideshow {
+  left: 5vw; /* Cách lề trái 5% của viewport width */
+}
+
+.right-slideshow {
+  right: 5vw; /* Cách lề phải 5% của viewport width */
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  display: none; /* Ẩn hình ảnh ban đầu */
+  animation: slideIn 3s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.slideshow-container img.active {
+  display: block; /* Hiển thị hình ảnh đang hoạt động */
+}
+
+.button {
+  position: absolute;
+  font-size: 24px;
+  padding: 20px 40px;
+  background: linear-gradient(to right, #b8860b, #ffd700);
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+#startButton {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#relightBtn {
+  display: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  max-width: fit-content;
+  max-height: fit-content;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#balloonImage {
+  position: absolute;
+  opacity: 0.8;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: bottom 5s ease, opacity 1s ease 4s; /* Add transition for smooth upward movement */
+}
+
+.spinner {
+  border: 8px solid #0000;
+  border-right-color: #ffa50097;
+  border-radius: 50%;
+  width: 50px;
+  aspect-ratio: 1;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: #ffa50097;
+  position: relative;
+  animation: l24 1s infinite linear;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+.loader:after {
+  animation-duration: 4s;
+}
+@keyframes l24 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+#scroll-container {
+  display: none;
+  position: absolute;
+  top: calc(10% + 20%);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1em;
+  font-weight: bold;
+  overflow: hidden;
+  width: 50%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+  white-space: nowrap; /* Không ngắt dòng văn bản */
+}
+
+#scroll-text {
+  display: inline-block;
+  text-align: right;
+  color: white;
+  animation: scroll 10s linear infinite alternate; /* Tạo animation và di chuyển ngược lại */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%); /* Bắt đầu từ bên phải */
+  }
+  100% {
+    transform: translateX(-100%); /* Di chuyển qua bên trái */
+  }
+}

@@ -8,16 +8,7 @@
   box-sizing: border-box;
 }
 
-/* body,
-html {
-  font-size: 100%;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-} */
-
 #os-phrases {
-  display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;

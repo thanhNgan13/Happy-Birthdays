@@ -41,6 +41,7 @@ async function setupMicrophone() {
           "linear-gradient(to right, #ffafbd , #ffc3a0)";
         // Dừng lắng nghe âm thanh
         isListening = false;
+        document.getElementById("scroll-container").style.display = "none";
       }
       requestAnimationFrame(detectBlow);
     }

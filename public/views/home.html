@@ -4,27 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday My Lover</title>
-    <!-- <link rel="stylesheet" href="../css/style_flame.css" />
-    <link rel="stylesheet" href="../css/style_start.css" />
-    <link rel="stylesheet" href="../css/style_snow.css" />
-    <link rel="stylesheet" href="../css/style_home.css" />
-    <link rel="stylesheet" href="../css/style_firework.css" />
-    <link rel="stylesheet" href="../css/style_intro_text.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/letteringjs@0.7.0/jquery.lettering.min.js"></script> -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
-    <link rel="preload" href="../css/style_flame.css" as="style" />
-    <link rel="preload" href="../css/style_start.css" as="style" />
-    <link rel="preload" href="../css/style_snow.css" as="style" />
-    <link rel="preload" href="../css/style_home.css" as="style" />
-    <link rel="preload" href="../css/style_firework.css" as="style" />
-    <link rel="preload" href="../css/style_intro_text.css" as="style" />
-    <link rel="stylesheet" href="../css/style_flame.css" />
-    <link rel="stylesheet" href="../css/style_start.css" />
+    <link rel="stylesheet" href="../css/style_final.css" />
     <link rel="stylesheet" href="../css/style_snow.css" />
-    <link rel="stylesheet" href="../css/style_home.css" />
-    <link rel="stylesheet" href="../css/style_firework.css" />
+    <link rel="stylesheet" href="../css/style_flame.css" />
     <link rel="stylesheet" href="../css/style_intro_text.css" />
+    <link rel="stylesheet" href="../css/style_firework.css" />
     <link
       rel="preload"
       href="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -39,22 +25,24 @@
     <script src="https://cdn.jsdelivr.net/npm/letteringjs@0.7.0/jquery.lettering.min.js"></script>
   </head>
   <body>
-    <div class="snowflakes" aria-hidden="true"></div>
-    <img
-      id="bannerImage"
-      src="../assets/images/banner.png"
-      alt="Happy Birthday Banner"
-      class="hidden"
-    />
-    <div>
-      <h1 class="title" id="title"></h1>
-    </div>
+    <div id="loadingSpinner" class="spinner"></div>
+    <div id="content">
+      <div class="snowflakes" aria-hidden="true"></div>
+      <img
+        id="bannerImage"
+        src="../assets/images/banner.png"
+        alt="Happy Birthday Banner"
+        class="hidden"
+      />
+      <div>
+        <h1 class="title" id="title"></h1>
+      </div>
+      <div id="scroll-container">
+        <h1 id="scroll-text">
+          Hãy nhắm mắt lại và ước điều ước em mong muốn đi.
+        </h1>
+      </div>
 
-    <div id="cake-container" class="cake-container">
-      <div class="cake" id="cake"></div>
-    </div>
-
-    <div class="container_2">
       <div class="os-phrases" id="os-phrases">
         <h2>Chào em bé của anh</h2>
         <h2>Hôm nay là ngày gì em biết không?</h2>
@@ -65,18 +53,37 @@
         <h2>Và để tiếp tục chương trình này</h2>
         <h2>Hãy nhấn vào nút bây đưới đây để tiếp tục nào</h2>
       </div>
-    </div>
-    <!-- /container -->
-    <button id="relightBtn">Thắp nến</button>
-    <button id="startButton">Nào cô bé của anh, hãy nhấn vào đây đi</button>
-    <img
-      id="balloonImage"
-      src="../assets/images/Balloon-Border.png"
-      alt="Balloons"
-      class="hidden"
-    />
 
-    <!-- Thêm thẻ audio để chứa tệp nhạc -->
+      <div id="cake-container" class="cake-container">
+        <div class="cake" id="cake"></div>
+      </div>
+
+      <div class="slideshow-container left-slideshow" id="leftSlideshow">
+        <img src="../assets/images/img1.jpg" class="active" />
+        <img src="../assets/images/img2.jpg" />
+        <img src="../assets/images/img3.jpg" />
+        <img src="../assets/images/img4.jpg" />
+      </div>
+      <div class="slideshow-container right-slideshow" id="rightSlideshow">
+        <img src="../assets/images/img5.jpg" class="active" />
+        <img src="../assets/images/img6.jpg" />
+        <img src="../assets/images/img7.jpg" />
+        <img src="../assets/images/img8.jpg" />
+      </div>
+
+      <img
+        id="balloonImage"
+        src="../assets/images/Balloon-Border.png"
+        alt="Balloons"
+        class="hidden"
+      />
+
+      <button id="startButton" class="button">
+        Nào cô bé của anh, hãy nhấn vào đây đi
+      </button>
+      <button id="relightBtn" class="button">Thắp nến</button>
+      <div id="fireworksContainer"></div>
+    </div>
     <audio id="backgroundMusic1" loop>
       <source src="../assets/audios/music.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
@@ -85,25 +92,7 @@
       <source src="../assets/audios/mucic_2.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-
-    <!-- Slideshow containers -->
-    <div class="slideshow-container left-slideshow" id="leftSlideshow">
-      <img src="../assets/images/img1.jpg" class="active" />
-      <img src="../assets/images/img2.jpg" />
-      <img src="../assets/images/img3.jpg" />
-      <img src="../assets/images/img4.jpg" />
-    </div>
-
-    <div class="slideshow-container right-slideshow" id="rightSlideshow">
-      <img src="../assets/images/img5.jpg" class="active" />
-      <img src="../assets/images/img6.jpg" />
-      <img src="../assets/images/img7.jpg" />
-      <img src="../assets/images/img8.jpg" />
-    </div>
-
-    <div id="fireworksContainer"></div>
-
     <script src="../js/candle_control.js"></script>
-    <script src="../js/start_control.js"></script>
+    <script src="../js/control_final.js"></script>
   </body>
 </html>
