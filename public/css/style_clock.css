@@ -1,0 +1,96 @@
+body {
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    45deg,
+    #ff9a9e,
+    #fad0c4,
+    #fad0c4,
+    #ff9a9e
+  ); /* Màu nền gradient */
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
+  color: #333;
+}
+
+.countdown-container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.countdown-element {
+  text-align: center;
+}
+
+.countdown-element span {
+  display: block;
+  font-size: 3em;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 2em;
+}
+
+.final-countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  font-size: 10em;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  animation: pulse 1s infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

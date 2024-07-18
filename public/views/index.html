@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="../css/style_clock.css" />
+  </head>
+  <body>
+    <div class="countdown-container">
+      <h1>Countdown to My Birthday</h1>
+      <div class="countdown">
+        <div class="countdown-element">
+          <span id="days"></span>
+          <div class="label">Days</div>
+        </div>
+        <div class="countdown-element">
+          <span id="hours"></span>
+          <div class="label">Hours</div>
+        </div>
+        <div class="countdown-element">
+          <span id="minutes"></span>
+          <div class="label">Minutes</div>
+        </div>
+        <div class="countdown-element">
+          <span id="seconds"></span>
+          <div class="label">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="final-countdown" id="final-countdown">
+      <span id="final-number"></span>
+    </div>
+
+    <audio
+      id="countdown-beep"
+      src="../assets/audios/short-beep.mp3"
+      preload="auto"
+    ></audio>
+
+    <audio
+      id="final-countdown-sound"
+      src="../assets/audios/countdown.mp3"
+      preload="auto"
+    ></audio>
+    <audio
+      id="finish-song"
+      src="../assets/audios/finish.mp3"
+      preload="auto"
+    ></audio>
+    <script src="../js/clock_control.js"></script>
+  </body>
+</html>
