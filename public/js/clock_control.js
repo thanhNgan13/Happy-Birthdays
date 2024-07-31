@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-const countdownDate = new Date("Jul 18, 2024 12:33:00").getTime();
+const countdownDate = new Date("Jul 20, 2024 19:05:00").getTime();
 
 function updateCountdownElement(id, value) {
   const element = document.getElementById(id);

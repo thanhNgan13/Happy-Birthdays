@@ -1,7 +1,7 @@
 const text1 =
-  "Mỗi người một quan điểm, mỗi người một cách code khác nhau. Anh Yêu em.";
+  "Hôm nay là ngày công chúa của anh sinh ra đời. Anh chúc em sinh nhật vui vẻ, hạnh phúc. Luôn luôn làm việc năng suất, khum bao giờ đau ốm. Anh rất vui và vinh dự được đón sinh nhật cùng em bé. Tiếp theo em bé hãy thắp nến và ước điều ước em mong muốn đi.";
 const text2 =
-  "Đây là đoạn văn bản thứ hai, sẽ được hiển thị sau khi thổi tắt nến.";
+  "Đây là một chút tâm huyết của anh làm tặng em bé. Anh hy vọng em thích nó. Đây cũng chỉ là mụt trong những món quà mà thôi. Chúc em sinh nhật vui vẻ, hạnh phúc. Anh yêu em nhiều lắm. Hãy nhìn ra bên ngoài đi ạ. Anh đang ở dưới đó. Ra anh ôm cái nà";
 
 let i = 0;
 let j = 0;
